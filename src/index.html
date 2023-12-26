@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="">
+      <div class="container py-5">
+        <nav class="p-5 md:flex md:items-center md:justify-between">
+          <div class="flex justify-between items-center">
+            <span class="text-2xl cursor-pointer">
+              <img
+                class="h-10 inline"
+                src="/oficina-informatica/img/icon/ferramenta-icon.svg"
+              />
+            </span>
+
+            <span
+              class="text-3xl text-whiteOficina100 cursor-pointer mx-2 md:hidden block"
+            >
+              <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+          </div>
+
+          <ul
+            class="md:flex md:items-center z-[1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 bg-blackOficina200 md:bg-transparent"
+          >
+            <li class="mx-4 my-6 md:my-0">
+              <a
+                href="#"
+                class="text-xl text-whiteOficina100 hover:text-grayOficina100 duration-500"
+                >Home</a
+              >
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+              <a
+                href="#"
+                class="text-xl text-whiteOficina100 hover:text-grayOficina100 duration-500"
+                >Serviços</a
+              >
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+              <a
+                href="#"
+                class="text-xl text-whiteOficina100 hover:text-grayOficina100 duration-500"
+                >Produtos</a
+              >
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+              <a
+                href="#"
+                class="text-xl text-whiteOficina100 hover:text-grayOficina100 duration-500"
+                >Sobre</a
+              >
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+              <a
+                href="#"
+                class="text-xl text-whiteOficina100 hover:text-grayOficina100 duration-500"
+                >Contato</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <section class="py-64 md:py-64">
+      <div class="container">
+        <div class="flex flex-col justify-center items-center relative">
+          <div
+            class="w-24 h-24 bg-yellowOficina100 rounded-full filter blur-4xl absolute"
+          ></div>
+          <div class="flex justify-center text-center z-50">
+            <h1 class="font-bold text-2xl lg:text-7xl text-whiteOficina100">
+              Pontencialize sua <br />
+              <span class="font-bold text-2xl lg:text-7xl text-yellowOficina100"
+                >Performance Digital</span
+              >
+            </h1>
+          </div>
+          <img
+            class="rocket-icon w-10 lg:w-auto"
+            src="/oficina-informatica/img/icon/rocket.svg"
+            alt=""
+          />
+        </div>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center py-10 gap-10"
+        >
+          <button
+            class="b3 relative text-whiteOficina100 border-yellowOficina100 border-2 p-3 hover:text-black duration-500"
+          >
+            <a href="#">Começar agora</a>
+          </button>
+          <button
+            class="p-3 text-whiteOficina100 hover:text-grayOficina100 duration-500"
+          >
+            <a href="#">Saber mais</a>
+          </button>
+        </div>
+        <div class="swiper py-5 mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide border-yellowOficina100 border-2">
+              <img src="/oficina-informatica/img/foto-0.png" alt="" />
+            </div>
+            <div class="swiper-slide border-yellowOficina100 border-2">
+              <img src="/oficina-informatica/img/foto-1.png" alt="" />
+            </div>
+            <div class="swiper-slide border-yellowOficina100 border-2">
+              <img src="/oficina-informatica/img/foto-2.png" alt="" />
+            </div>
+            <div class="swiper-slide border-yellowOficina100 border-2">
+              <img src="/oficina-informatica/img/foto-3.png" alt="" />
+            </div>
+            <div class="swiper-slide border-yellowOficina100 border-2">
+              <img src="/oficina-informatica/img/foto-4.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/oficina-informatica/js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

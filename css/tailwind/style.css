@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #242424;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+@keyframes rocketAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.rocket-icon {
+  animation: rocketAnimation 2s infinite alternate;
+}
+
+.b3:before {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  background-color: #ffec01;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  z-index: -1;
+}
+.b3:hover:before {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.swiper {
+  width: 625px;
+  height: 469px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 425px) {
+  .swiper {
+    width: 300px;
+    height: 300px;
+  }
+}

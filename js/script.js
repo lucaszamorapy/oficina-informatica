@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // slider.js
 function Slider() {
   const imagens = [
-    "/oficina-informatica/img/foto-0.png",
-    "/oficina-informatica/img/foto-1.png",
-    "/oficina-informatica/img/foto-2.png",
-    "/oficina-informatica/img/foto-3.png",
-    "/oficina-informatica/img/foto-4.png",
+    "../img/foto-0.png",
+    "../img/foto-1.png",
+    "../img/foto-2.png",
+    "../img/foto-3.png",
+    "../img/foto-4.png",
   ];
 
   const swiperWrapper = document.getElementById("swiper-wrapper");

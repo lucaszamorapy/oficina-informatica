@@ -1,0 +1,6 @@
+# Arquivos e diretórios específicos do Tailwind CSS
+/css/tailwind/style.css
+
+# Outros arquivos e diretórios comuns
+/node_modules/
+/.cache/

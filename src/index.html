@@ -330,6 +330,73 @@
       </div>
     </section>
 
+    <section class="md:mb-28">
+      <div class="container">
+        <h1
+          class="text-center px-5 py-10 text-4xl lg:px-0 lg:py-0 md:text-5xl text-whiteOficina100"
+        >
+          Conheça os nossos
+          <span class="text-center text-yellowOficina100 font-semibold"
+            >produtos</span
+          >
+        </h1>
+        <div
+          class="flex flex-col justify-center gap-10 py-10 lg:gap-20 lg:py-16 items-center md:flex-row"
+        >
+          <button
+            id="btnAll"
+            class="filter-button b3 relative text-whiteOficina100 border-yellowOficina100 border-2 p-3 hover:text-black duration-500"
+            onclick="initFilterImages('all', 6, this) "
+          >
+            Todos
+          </button>
+          <button
+            id="btnPCGamer"
+            class="filter-button b3 relative text-whiteOficina100 border-yellowOficina100 border-2 p-3 hover:text-black duration-500"
+            onclick="initFilterImages('pcGamer', 4, this)"
+          >
+            PC Gamer
+          </button>
+          <button
+            id="btnNotebook"
+            class="filter-button b3 relative text-whiteOficina100 border-yellowOficina100 border-2 p-3 hover:text-black duration-500"
+            onclick="initFilterImages('notebook', 2, this)"
+          >
+            Notebooks
+          </button>
+          <button
+            id="btnPerifericos"
+            class="filter-button b3 relative text-whiteOficina100 border-yellowOficina100 border-2 p-3 hover:text-black duration-500"
+            onclick="initFilterImages('perifericos', 3, this)"
+          >
+            Perfiféricos
+          </button>
+        </div>
+
+        <div class="images-container flex-col justify-center" id="allImages">
+          <div class="all-img img-container" id="all-img"></div>
+        </div>
+        <div
+          class="images-container flex-col justify-center"
+          id="pcGamerImages"
+        >
+          <div class="pc-gamer-img img-container" id="pc-gamer-img"></div>
+        </div>
+        <div
+          class="images-container flex-col justify-center"
+          id="notebookImages"
+        >
+          <div class="notebook-img img-container" id="notebook-img"></div>
+        </div>
+        <div
+          class="images-container flex-col justify-center"
+          id="perifericosImages"
+        >
+          <div class="perifericos-img img-container" id="perifericos-img"></div>
+        </div>
+      </div>
+    </section>
+
     <script src="../js/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

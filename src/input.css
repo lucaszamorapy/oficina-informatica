@@ -31,6 +31,19 @@ body {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
 .counter {
   animation: countUp 1s ease-out;
 }
@@ -58,6 +71,16 @@ body {
   width: 100%;
   right: auto;
   left: 0;
+}
+
+.b3:focus {
+  background-color: #ffec01;
+  color: #242424;
+}
+
+.b3.active {
+  background-color: #ffec01;
+  color: #242424;
 }
 
 .swiper {

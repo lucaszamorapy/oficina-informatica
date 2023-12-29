@@ -103,6 +103,31 @@ body {
   object-fit: cover;
 }
 
+.js-accordion dd.ativo {
+  display: block;
+  animation: slide 0.5s forwards;
+}
+
+.faq-lista dt::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #ffec01;
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    max-height: 200px;
+    opacity: 1;
+  }
+}
+
 @media (max-width: 425px) {
   .swiper {
     width: 300px;

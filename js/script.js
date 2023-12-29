@@ -142,7 +142,7 @@ function initRenderImageFilter(category, count, container) {
     img.src = imagem;
     img.alt = `${category} Foto ${index}`;
     img.className =
-      "border-yellowOficina100 border-2 transform hover:scale-105 transition-transform duration-300";
+      "shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-yellowOficina200";
 
     imagesDiv.appendChild(img);
   });

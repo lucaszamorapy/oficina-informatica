@@ -39,44 +39,53 @@ Slider();
 function initCounters() {
   const counters = document.querySelectorAll(".counter");
   const speed = 200;
+  let activated = false;
 
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
       rect.top >= 0 &&
-      rect.left >= 0 &&
       rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        (window.innerHeight || document.documentElement.clientHeight)
     );
   }
 
   function activateCounters() {
-    counters.forEach((counter) => {
-      if (isElementInViewport(counter)) {
-        const target = +counter.getAttribute("data-target");
-        const inc = target / speed;
-        let count = 0;
+    if (!activated) {
+      counters.forEach((counter) => {
+        if (isElementInViewport(counter)) {
+          const target = +counter.getAttribute("data-target");
+          const inc = target / speed;
+          let count = 0;
 
-        const updateCount = () => {
-          if (count < target) {
-            counter.innerText = "+" + Math.ceil(count + inc);
-            count += inc;
-            setTimeout(updateCount, 1);
-          } else {
-            counter.innerText = "+" + target;
-          }
-        };
+          const updateCount = () => {
+            if (count < target) {
+              counter.innerText = "+" + Math.ceil(count + inc);
+              count += inc;
+              setTimeout(updateCount, 1);
+            } else {
+              counter.innerText = "+" + target;
+              activated = true; // Marca a função como ativada após a animação inicial
+            }
+          };
 
-        updateCount();
-      }
-    });
+          updateCount();
+        }
+      });
+    }
   }
 
-  activateCounters();
+  function handleScrollAndResize() {
+    activateCounters();
+  }
 
-  window.addEventListener("scroll", activateCounters);
+  window.addEventListener("scroll", handleScrollAndResize);
+  window.addEventListener("resize", handleScrollAndResize);
+
+  // Ativar contadores na inicialização
+  activateCounters();
 }
+
 initCounters();
 
 //filter.js

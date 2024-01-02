@@ -110,6 +110,8 @@ body {
 
 .faq-lista dt::before {
   content: "";
+  position: relative;
+  top: -2px;
   display: inline-block;
   width: 20px;
   height: 10px;

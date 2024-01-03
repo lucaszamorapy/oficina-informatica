@@ -179,3 +179,26 @@ function initAccordion() {
   }
 }
 initAccordion();
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+var scrollToTopButton = document.getElementById("scrollToTopButton");
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Adiciona evento de clique ao botão
+  scrollToTopButton.addEventListener("click", scrollToTop);
+
+  // Adiciona evento de scroll à janela
+  window.addEventListener("scroll", handleScroll);
+
+  // Função para verificar a posição da rolagem e mostrar/ocultar o botão
+  function handleScroll() {
+    if (window.scrollY > 0) {
+      scrollToTopButton.classList.remove("hidden");
+    } else {
+      scrollToTopButton.classList.add("hidden");
+    }
+  }
+});

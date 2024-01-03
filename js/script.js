@@ -202,3 +202,53 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+//scroll suave
+function initMobileMenuScroll() {
+  const linksInternos = document.querySelectorAll('#mobile-menu a[href^="#"]');
+  const topLinks = document.querySelectorAll('#top-links a[href^="#"]');
+
+  function scrollToSection(event) {
+    event.preventDefault();
+    const pegarHref = event.currentTarget.getAttribute("href");
+    const section = document.querySelector(pegarHref);
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
+  linksInternos.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
+
+  topLinks.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  initMobileMenuScroll();
+});
+
+//scroll animação
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".js-scroll");
+
+  function animaScroll() {
+    sections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const isSectionVisible = sectionTop < window.innerHeight * 0.8;
+
+      if (isSectionVisible && !section.classList.contains("animated")) {
+        section.classList.add("animated");
+      } else if (!isSectionVisible && section.classList.contains("animated")) {
+        section.classList.remove("animated");
+      }
+    });
+  }
+
+  animaScroll();
+  window.addEventListener("scroll", animaScroll);
+});

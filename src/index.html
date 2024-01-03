@@ -41,7 +41,7 @@
 
         <div
           id="mobile-menu"
-          class="hidden md:flex md:justify-between items-center p-4"
+          class="hidden md:flex md:justify-between items-center p-4 js-menu"
         >
           <div>
             <img src="../img/icon/ferramenta-icon.svg" alt="" />
@@ -49,7 +49,7 @@
           <ul class="md:flex gap-6">
             <li class="my-2">
               <a
-                href="#"
+                href="#home"
                 class="text-white text-xl hover:text-grayOficina100 duration-500"
                 >Home</a
               >
@@ -87,8 +87,8 @@
       </div>
     </section>
 
-    <section class="mb-28">
-      <div class="container">
+    <section id="home" class="mb-28">
+      <div class="container js-scroll opacity-0 translate-y-20">
         <div class="flex flex-col justify-center items-center relative mt-20">
           <div
             class="w-24 h-24 bg-yellowOficina100 rounded-full filter blur-4xl absolute"
@@ -127,7 +127,7 @@
       </div>
     </section>
 
-    <section id="servicos" class="mb-28">
+    <section id="servicos" class="mb-28 js-scroll opacity-0 translate-y-20">
       <div class="container">
         <h1
           class="text-center px-5 py-5 text-4xl lg:px-0 lg:py-0 md:text-5xl text-whiteOficina100"
@@ -138,13 +138,13 @@
           >
         </h1>
         <p
-          class="text-center text-md mb-10 px-5 mt-0 md:px-0 lg:mt-5 text-whiteOficina100"
+          class="text-center text-md px-5 mt-0 md:px-0 lg:mt-5 text-whiteOficina100"
         >
           Conheça as vantagens de ter os nossos <br />
           serviços abaixo
         </p>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 p-10 lg:px-20 py-16 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 p-10 lg:px-20 gap-6">
           <div
             class="bg-blackOficina100 p-6 lg:p-10 rounded-lg transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-yellowOficina200"
           >
@@ -251,7 +251,7 @@
       </div>
     </section>
 
-    <section id="sobre" class="mb-28">
+    <section id="sobre" class="mb-28 js-scroll opacity-0 translate-y-20">
       <div class="container sobre">
         <div
           class="flex flex-col justify-center items-center lg:grid lg:grid-cols-3 lg:items-start md:px-10 gap-10"
@@ -335,7 +335,7 @@
       </div>
     </section>
 
-    <section id="produtos" class="mb-28">
+    <section id="produtos" class="mb-28 js-scroll opacity-0 translate-y-20">
       <div class="container">
         <h1
           class="text-center px-5 py-10 text-4xl lg:px-0 lg:py-0 md:text-5xl text-whiteOficina100"
@@ -345,8 +345,13 @@
             >produtos</span
           >
         </h1>
+        <p
+          class="text-center text-md mb-10 px-5 mt-0 md:px-0 lg:mt-5 text-whiteOficina100"
+        >
+          Descubra nossa ampla gama de produtos de alta qualidade
+        </p>
         <div
-          class="flex flex-col justify-center gap-10 py-10 lg:gap-20 lg:py-16 items-center md:flex-row"
+          class="flex flex-col justify-center gap-10 mb-10 lg:gap-20 items-center md:flex-row"
         >
           <button
             id="btnAll"
@@ -402,7 +407,7 @@
       </div>
     </section>
 
-    <section class="mb-28">
+    <section class="mb-28 js-scroll opacity-0 translate-y-20">
       <div class="flex justify-center items-center">
         <div
           class="w-full flex flex-col justify-center items-center bg-blackOficina100 p-10"
@@ -432,7 +437,82 @@
       </div>
     </section>
 
-    <section class="mb-28">
+    <section id="contato" class="mb-28 js-scroll opacity-0 translate-y-20">
+      <div class="container">
+        <h1
+          class="text-start px-5 text-4xl lg:px-10 md:text-5xl text-whiteOficina100"
+        >
+          Como
+          <span class="text-center text-yellowOficina100 font-semibold"
+            >chegar</span
+          >
+          na gente
+        </h1>
+        <p
+          class="text-start px-5 text-md py-5 mb-10 lg:px-10 text-whiteOficina100"
+        >
+          Explore nosso mapa para encontrar facilmente nossa localização e entre
+          <br />
+          em contato conosco para qualquer dúvida ou informação adicional.
+          Estamos ansiosos para atendê-lo!
+        </p>
+        <div
+          class="flex flex-col justify-center px-5 gap-y-5 items-center lg:grid lg:grid-cols-3 lg:items-start lg:px-10 lg:gap-y-0"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3645.7748651223856!2d-46.3862!3d-23.9684!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1c96d424910b%3A0x9269fa798b0409fc!2sR.%20Jos%C3%A9%20Bonif%C3%A1cio%2C%20369%20-%20Centro%2C%20S%C3%A3o%20Vicente%20-%20SP%2C%2011310-080!5e0!3m2!1sen!2sbr!4v1703870670169!5m2!1sen!2sbr"
+            width="400"
+            class="rounded-lg shadow-md shadow-yellowOficina200 lg:col-span-2 w-full"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="flex flex-col mt-10 lg:col-span-1 lg:pl-14 lg:mt-0">
+            <h1 class="text-yellowOficina100 font-semibold text-3xl">
+              Email & Telefone
+            </h1>
+            <h2
+              class="text-md text-white hover:text-grayOficina100 duration-500"
+            >
+              <a href="mailto:oficina.wagner@gmail.com"
+                >oficina.wagner@gmail.com</a
+              >
+            </h2>
+            <h2 class="text-md text-white pb-3">(13) 97408-7415</h2>
+            <h1 class="text-yellowOficina100 font-semibold text-3xl">
+              Horários
+            </h1>
+            <h2 class="text-md text-white">De sexta à sábado</h2>
+            <h2 class="text-md text-white pb-3">Das 09:00 às 18:00</h2>
+            <h1 class="text-yellowOficina100 font-semibold text-3xl">
+              Redes Sociais
+            </h1>
+            <div class="flex mt-0 lg:mt-1">
+              <a
+                href="https://www.instagram.com/oficina_info?igshid=YmMyMTA2M2Y%3D"
+                target="_blank"
+                ><img
+                  src="../img/icon/instagram.svg"
+                  alt=""
+                  class="h-10 transform hover:scale-125 transition-transform duration-300"
+              /></a>
+              <a
+                href="https://www.facebook.com/wagners.vazquez/"
+                target="_blank"
+                ><img
+                  src="../img/icon/facebook-outline.svg"
+                  alt=""
+                  class="h-10 transform hover:scale-125 transition-transform duration-300"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-28 js-scroll opacity-0 translate-y-20 h-100">
       <div class="container">
         <h1
           class="text-center px-5 py-5 text-4xl lg:px-0 lg:py-0 md:text-5xl text-whiteOficina100"
@@ -524,73 +604,6 @@
       </div>
     </section>
 
-    <section id="contato" class="mb-28">
-      <div class="container">
-        <h1
-          class="text-start px-5 py-5 text-4xl lg:px-10 lg:py-10 md:text-5xl text-whiteOficina100"
-        >
-          Como
-          <span class="text-center text-yellowOficina100 font-semibold"
-            >chegar</span
-          >
-          na gente
-        </h1>
-        <div
-          class="flex flex-col justify-center px-5 gap-y-5 items-center lg:grid lg:grid-cols-3 lg:items-start lg:px-10 lg:gap-y-0"
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3645.7748651223856!2d-46.3862!3d-23.9684!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1c96d424910b%3A0x9269fa798b0409fc!2sR.%20Jos%C3%A9%20Bonif%C3%A1cio%2C%20369%20-%20Centro%2C%20S%C3%A3o%20Vicente%20-%20SP%2C%2011310-080!5e0!3m2!1sen!2sbr!4v1703870670169!5m2!1sen!2sbr"
-            width="400"
-            class="rounded-lg shadow-md shadow-yellowOficina200 lg:col-span-2 w-full"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <div class="flex flex-col mt-10 lg:col-span-1 lg:pl-14 lg:mt-0">
-            <h1 class="text-yellowOficina100 font-semibold text-3xl">
-              Email & Telefone
-            </h1>
-            <h2
-              class="text-md text-white hover:text-grayOficina100 duration-500"
-            >
-              <a href="mailto:oficina.wagner@gmail.com"
-                >oficina.wagner@gmail.com</a
-              >
-            </h2>
-            <h2 class="text-md text-white pb-3">(13) 97408-7415</h2>
-            <h1 class="text-yellowOficina100 font-semibold text-3xl">
-              Horários
-            </h1>
-            <h2 class="text-md text-white">De sexta à sábado</h2>
-            <h2 class="text-md text-white pb-3">Das 09:00 às 18:00</h2>
-            <h1 class="text-yellowOficina100 font-semibold text-3xl">
-              Redes Sociais
-            </h1>
-            <div class="flex mt-0 lg:mt-1">
-              <a
-                href="https://www.instagram.com/oficina_info?igshid=YmMyMTA2M2Y%3D"
-                target="_blank"
-                ><img
-                  src="../img/icon/instagram.svg"
-                  alt=""
-                  class="h-10 transform hover:scale-125 transition-transform duration-300"
-              /></a>
-              <a
-                href="https://www.facebook.com/wagners.vazquez/"
-                target="_blank"
-                ><img
-                  src="../img/icon/facebook-outline.svg"
-                  alt=""
-                  class="h-10 transform hover:scale-125 transition-transform duration-300"
-              /></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="bg-blackOficina200">
       <div class="container">
         <div
@@ -603,7 +616,7 @@
               class="h-24"
             />
           </div>
-          <div class="flex flex-col py-5">
+          <div id="top-links" class="flex flex-col py-5">
             <h1 class="text-yellowOficina100 font-semibold text-2xl">
               LINKS RÁPIDOS
             </h1>
@@ -615,25 +628,25 @@
             </a>
             <a
               class="text-md text-white hover:text-grayOficina100 duration-500 w-0"
-              href="#home"
+              href="#servicos"
             >
               Serviços
             </a>
             <a
               class="text-md text-white hover:text-grayOficina100 duration-500 w-0"
-              href="#home"
+              href="#sobre"
             >
               Sobre
             </a>
             <a
               class="text-md text-white hover:text-grayOficina100 duration-500 w-0"
-              href="#home"
+              href="#produtos"
             >
               Produtos
             </a>
             <a
               class="text-md text-white hover:text-grayOficina100 duration-500 w-0"
-              href="#home"
+              href="#contato"
             >
               Contato
             </a>

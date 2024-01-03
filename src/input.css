@@ -130,6 +130,18 @@ body {
   }
 }
 
+/* Scroll Animação */
+.js-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.js-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Button to Top */
 @keyframes fadeInScale {
   from {

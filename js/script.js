@@ -180,6 +180,7 @@ function initAccordion() {
 }
 initAccordion();
 
+//scrollagem para cima
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -203,38 +204,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//scroll suave
-function initMobileMenuScroll() {
-  const linksInternos = document.querySelectorAll('#mobile-menu a[href^="#"]');
-  const topLinks = document.querySelectorAll('#top-links a[href^="#"]');
-
-  function scrollToSection(event) {
-    event.preventDefault();
-    const pegarHref = event.currentTarget.getAttribute("href");
-    const section = document.querySelector(pegarHref);
-    section.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-
-  linksInternos.forEach((link) => {
-    link.addEventListener("click", scrollToSection);
-  });
-
-  topLinks.forEach((link) => {
-    link.addEventListener("click", scrollToSection);
-  });
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  initMobileMenuScroll();
-});
-
-//scroll animação
-
+//scrollagem suave & link suave
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".js-scroll");
+  const linksInternos = document.querySelectorAll('#mobile-menu a[href^="#"]');
+  const topLinks = document.querySelectorAll('#top-links a[href^="#"]');
 
   function animaScroll() {
     sections.forEach((section) => {
@@ -249,6 +223,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function scrollToSection(event) {
+    event.preventDefault();
+    const pegarHref = event.currentTarget.getAttribute("href");
+    const section = document.querySelector(pegarHref);
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "end",
+    });
+  }
+
   animaScroll();
   window.addEventListener("scroll", animaScroll);
+
+  linksInternos.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
+
+  topLinks.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
 });

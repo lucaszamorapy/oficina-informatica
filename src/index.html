@@ -111,6 +111,7 @@
           class="flex flex-col md:flex-row justify-center items-center py-10 gap-10"
         >
           <button
+            id="abrirModal"
             class="b3 relative text-whiteOficina100 border-yellowOficina100 border-2 p-3 hover:text-black duration-500"
           >
             <a href="#">Começar agora</a>
@@ -735,6 +736,98 @@
     >
       <img src="../img/icon/arrowup.svg" alt="" />
     </button>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 overflow-y-auto bg-black bg-opacity-50 hidden"
+    >
+      <div class="flex items-center justify-center min-h-screen">
+        <div
+          class="bg-blackOficina100 py-8 px-20 rounded shadow-lg relative fade-in"
+        >
+          <button
+            id="fecharModal"
+            type="button"
+            class="absolute top-0 right-0 mt-4 mr-4 text-white text-4xl hover:text-yellowOficina100 duration-500"
+          >
+            &times;
+          </button>
+          <h1 class="text-4xl font-bold text-yellowOficina100 mb-4">
+            Fale Conosco!
+          </h1>
+          <form>
+            <div class="mb-4">
+              <label
+                for="nome"
+                class="block text-sm text-grayOficina100 font-semibold mb-2"
+                >Nome:</label
+              >
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                class="w-full px-3 py-2 border rounded"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="email"
+                class="block text-sm text-grayOficina100 font-semibold mb-2"
+                >E-mail:</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full px-3 py-2 border rounded"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="telefone"
+                class="block text-sm text-grayOficina100 font-semibold mb-2"
+                >Telefone:</label
+              >
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                class="w-full px-3 py-2 border rounded"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="mensagem"
+                class="block text-sm text-grayOficina100 font-semibold mb-2"
+                >Mensagem:</label
+              >
+              <input
+                id="mensagem"
+                name="mensagem"
+                rows="4"
+                class="w-full px-3 py-20 border rounded"
+              ></input>
+            </div>
+          </form>
+          <button
+            id="enviarFormulario"
+            class="p-2 text-whiteOficina100 border-2 border-yellowOficina100 bg-transparent transform hover:scale-105 transition-transform duration-300"
+          >
+            Enviar
+          </button>
+          <div
+            id="mensagemSucesso"
+            class="hidden mt-4 p-2 bg-green-500 text-white rounded fade-in"
+          >
+            Formulário enviado com sucesso
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="../js/script.js"></script>
 

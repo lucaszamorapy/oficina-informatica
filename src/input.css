@@ -14,6 +14,10 @@ body {
   animation: fadeIn 0.5s ease-in-out;
 }
 
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out;
+}
+
 .counter {
   animation: countUp 1s ease-out;
 }
@@ -130,6 +134,14 @@ body {
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 /* Scroll Animação */
 .js-scroll {
   opacity: 0;

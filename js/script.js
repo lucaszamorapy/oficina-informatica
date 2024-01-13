@@ -188,13 +188,10 @@ function scrollToTop() {
 var scrollToTopButton = document.getElementById("scrollToTopButton");
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Adiciona evento de clique ao botão
   scrollToTopButton.addEventListener("click", scrollToTop);
 
-  // Adiciona evento de scroll à janela
   window.addEventListener("scroll", handleScroll);
 
-  // Função para verificar a posição da rolagem e mostrar/ocultar o botão
   function handleScroll() {
     if (window.scrollY > 0) {
       scrollToTopButton.classList.remove("hidden");
@@ -245,3 +242,58 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", scrollToSection);
   });
 });
+
+//modal
+function abrirModal() {
+  const modal = document.getElementById("modal");
+  modal.classList.remove("hidden");
+}
+
+function fecharModal() {
+  const modal = document.getElementById("modal");
+  modal.classList.add("fade-out");
+  setTimeout(() => {
+    modal.classList.add("hidden");
+    modal.classList.remove("fade-out");
+  }, 500);
+  document.getElementById("mensagemSucesso").classList.add("hidden");
+}
+
+function validarFormulario() {
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const telefone = document.getElementById("telefone").value;
+
+  if (nome.trim() === "") {
+    alert("Por favor, preencha o campo Nome.");
+    return false;
+  }
+
+  if (email.indexOf("@") === -1) {
+    alert("Por favor, insira um endereço de email válido.");
+    return false;
+  }
+
+  if (telefone.trim() === "") {
+    alert("Por favor, preencha o campo Telefone.");
+    return false;
+  }
+
+  return true;
+}
+
+function enviarFormulario() {
+  if (validarFormulario()) {
+    const mensagemSucesso = document.getElementById("mensagemSucesso");
+    mensagemSucesso.classList.remove("hidden");
+    setTimeout(() => {
+      fecharModal();
+    }, 1000);
+  }
+}
+
+document.getElementById("abrirModal").addEventListener("click", abrirModal);
+document.getElementById("fecharModal").addEventListener("click", fecharModal);
+document
+  .getElementById("enviarFormulario")
+  .addEventListener("click", enviarFormulario);
